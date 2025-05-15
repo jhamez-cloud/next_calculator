@@ -13,7 +13,7 @@ export default function Home() {
   /* const [expression,setExpression] = useState<string>('') */
 
   return (
-    <>
+    <div className={`body ${theme===1?'bg-[hsl(222,26%,31%)]':(theme===2?'bg-[hsl(0,0%,90%)]':'')}`}>
       <div className="w-2/7 h-2/3">
         <StateContext.Provider value={{theme,setTheme}}>
           <Heading/>
@@ -21,6 +21,6 @@ export default function Home() {
           <Keypad/>
         </StateContext.Provider>
       </div>
-    </>
+    </div>
   );
 }

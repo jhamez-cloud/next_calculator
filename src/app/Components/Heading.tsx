@@ -1,8 +1,8 @@
 "use client";
 
 import { StateContext } from '@/Context/StateContext';
-import { error } from 'console';
 import React, { useContext } from 'react'
+import RadioButton from './ui/RadioButton';
 
 const Heading = () => {
 
@@ -13,18 +13,23 @@ const Heading = () => {
     }
 
     const {theme,setTheme} = context;
+/* 
+    if(theme === 1){
+      console.log('1')
+    }else if (theme === 2){
+      console.log('2');
+    }else{console.log('3')} */
 
   return (
-    <div className='w-full h-[30px] text-white flex justify-between mb-3'>
+    <div className={`heading ${theme===1?'text-white':(theme===2?'text-[hsl(60,10%,19%)]':'')}`}>
       <h1 className='font-[600]'>Calc</h1>
 
-      <div className='flex justify-between items-center text-[9px] font-medium w-1/5'>
+      <div className='flex justify-between items-center text-[9px] font-medium w-1/4'>
         <p>THEME</p>
-        <div className='bg-[hsl(223,31%,20%)] h-[20px] p-1 rounded-full space-x-0.5'>
-           <input type="radio" name='theme' className='focus:ring-amber-300 relative before:absolute before:content-["1"] before:-top-5 before:w-9/10 before:h-full before:text-center '/>
-           <input type="radio" name='theme' className='relative before:absolute before:content-["2"] before:-top-5 before:w-9/10 before:h-full before:text-center '/>
-           <input type="radio" name='theme' className='relative before:absolute before:content-["3"] before:-top-5 before:w-9/10 before:h-full before:text-center '/>
-           
+        <div className={`radioBackground ${theme===1?'bg-[hsl(223,31%,20%)]':(theme===2?'bg-[hsl(0,5%,81%)]':'')}`}>
+           <RadioButton id={1}/>
+           <RadioButton id={2}/>
+           <RadioButton id={3}/>
         </div>
       </div>
     </div>
