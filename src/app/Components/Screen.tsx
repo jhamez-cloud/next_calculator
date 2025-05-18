@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { StateContext } from '@/Context/StateContext';
 import { useContext } from 'react';
 
@@ -10,10 +10,12 @@ const Screen = () => {
     }
   
     const {theme,setTheme} = context;
+    const {expression,setExpression} = context;
+    
 
   return (
-    <div className={`screen ${theme===1?'bg-[hsl(224,36%,15%)]':(theme===2?'bg-[hsl(0,0%,93%)]':'')}`}>
-      <input type="text" className='w-full h-full text-white text-3xl font-bold text-right focus:outline-none '/>
+    <div className={`screen ${theme===1?'bg-[hsl(224,36%,15%)]':(theme===2?'bg-[hsl(0,0%,93%)]':(theme===3?'bg-[hsl(268,71%,12%)]':''))}`}>
+      <input type="text" value={expression.join('')} readOnly className={`screenInput ${theme===1?'text-white':(theme===2?'text-[hsl(60,10%,19%)]':(theme===3?'text-[hsl(52,100%,62%)]':''))}`}/>
     </div>
   )
 }

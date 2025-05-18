@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface SetContextType{
     theme:number;
     setTheme:React.Dispatch<React.SetStateAction<number>>;

@@ -9,7 +9,7 @@
 }
 
 .theme_1--key{
-  @apply bg-[hsl(30,25%,89%)] hover:bg-white hover:cursor-pointer rounded-md text-2xl font-bold text-[hsl(221,14%,31%)]
+  @apply hover:cursor-pointer rounded-md text-2xl font-bold border-b-4
 }
 
 .radioBackground{
@@ -17,11 +17,15 @@
 }
 
 .theme_1--radio-Btn{
-  @apply relative w-[13px] h-[13px] appearance-none before:absolute  before:-top-5 before:w-9/10 before:h-full before:text-center text-xs after:absolute after:content-[""] after:w-full after:h-full after:rounded-full /* text-[hsl(221,14%,31%)] */
+  @apply relative w-[13px] h-[13px] appearance-none before:absolute  before:-top-5 before:w-9/10 before:h-full before:text-center text-xs after:absolute after:content-[""] after:w-full after:h-full after:rounded-full hover:cursor-pointer /* text-[hsl(221,14%,31%)] */
 }
 
 .screen{
   @apply w-full h-1/6 rounded-md px-6 py-5 mb-3
+}
+
+.screenInput{
+  @apply w-full h-full  text-3xl font-bold text-right focus:outline-none 
 }
 
 .keypad{
@@ -29,11 +33,11 @@
 }
 
 .delBtn{
-  @apply text-white rounded-md font-bold
+  @apply text-white rounded-md font-bold hover:cursor-pointer border-b-4
 }
 
 .equalBtn{
-  @apply text-white rounded-md font-bold text-xl col-span-2
+  @apply rounded-md font-bold text-xl col-span-2 hover:cursor-pointer border-b-4
 }
 
 body {

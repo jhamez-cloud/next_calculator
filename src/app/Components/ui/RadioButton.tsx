@@ -30,6 +30,7 @@ const RadioButton = (props:radio) => {
                 before:content-[attr(data-label)]
                 ${props.id && theme === 1 ? 'before:text-white checked:after:bg-[hsl(6,63%,50%)]' : ''}
                 ${props.id && theme === 2 ? 'before:text-[hsl(60,10%,19%)] checked:after:bg-[hsl(25,98%,40%)]' : ''}
+                ${props.id && theme === 3 ? 'before:text-[hsl(52,100%,62%)] checked:after:bg-[hsl(176,100%,44%)]' : ''}
             `}
             onClick={() => setTheme(props.id)}
         />
