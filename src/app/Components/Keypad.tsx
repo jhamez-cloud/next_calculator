@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from 'react'
+//import React, { useRef, useState } from 'react'
 import { StateContext } from '@/Context/StateContext';
 import { useContext } from 'react';
 import KeypadButton from './ui/KeypadButton';
@@ -13,23 +13,23 @@ const Keypad = () => {
         throw new Error ("StateContext.Provider is missing");
     }
   
-    const {theme,setTheme} = context;
-    const {expression,setExpression} = context;
+    //const {theme,setTheme} = context;
+    const {expression,setExpression,theme} = context;
 
     const handleDelete = () => {
     setExpression(prev => prev.slice(0, -1));
   };
-  const handleReset = () => {
-      setExpression([]);
-    };
-  const handleEqual = () => {
-    const expressionString = expression.join('');
-    setExpression([eval(expressionString)]);
-  }
+    const handleReset = () => {
+        setExpression([]);
+      };
+    const handleEqual = () => {
+      const expressionString = expression.join('');
+      setExpression([eval(expressionString)]);
+    }
 
 
   return (
-    <div className={`keypad ${theme===1?'bg-[hsl(223,31%,20%)]':(theme===2?'bg-[hsl(0,5%,81%)]':(theme===3?'bg-[hsl(268,71%,12%)]':''))}`}>
+    <div className={`keypad ${theme===1?'bg-[hsl(223,31%,20%)]':(theme===2?'bg-[hsl(0,5%,80%)]':(theme===3?'bg-[hsl(268,71%,12%)]':''))}`}>
       <KeypadButton id='7'/>
       <KeypadButton id='8'/>
       <KeypadButton id='9'/>

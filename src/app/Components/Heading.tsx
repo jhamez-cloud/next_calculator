@@ -12,7 +12,7 @@ const Heading = () => {
         throw new Error ("StateContext.Provider is missing");
     }
 
-    const {theme,setTheme} = context;
+    const {theme} = context;
 /* 
     if(theme === 1){
       console.log('1')
@@ -24,7 +24,7 @@ const Heading = () => {
     <div className={`heading ${theme===1?'text-white':(theme===2?'text-[hsl(60,10%,19%)]':(theme===3?'text-[hsl(52,100%,62%)]':''))}`}>
       <h1 className='font-[600]'>Calc</h1>
 
-      <div className='flex justify-between items-center text-[9px] font-medium w-1/4'>
+      <div className='flex justify-between items-center text-[9px] font-medium w-1/4 max-md:w-2/7'>
         <p>THEME</p>
         <div className={`radioBackground ${theme===1?'bg-[hsl(223,31%,20%)]':(theme===2?'bg-[hsl(0,5%,81%)]':(theme===3?'bg-[hsl(268,71%,12%)]':''))}`}>
            <RadioButton id={1}/>

@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div className={`body ${theme===1?'bg-[hsl(222,26%,31%)]':(theme===2?'bg-[hsl(0,0%,90%)]':(theme===3?'bg-[hsl(268,75%,9%)]':''))}`}>
-      <div className="w-2/7 h-2/3">
+      <div className="w-2/7 h-2/3 max-lg:w-9/10">
         <StateContext.Provider value={{theme,setTheme,expression,setExpression}}>
           <Heading/>
           <Screen/>

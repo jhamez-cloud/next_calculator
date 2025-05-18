@@ -19,8 +19,8 @@ const KeypadButton = (props:keypadButton) => {
       throw new Error ("StateContext.Provider is missing");
   }
 
-  const {theme,setTheme} = context;
-  const {expression,setExpression} = context;
+  //const {theme,setTheme} = context;
+  const {expression,setExpression,theme} = context;
 
   const handleClick = () => {
    /*  const value = (event.target as HTMLButtonElement).textContent ?? '';

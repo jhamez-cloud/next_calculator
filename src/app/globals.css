@@ -5,7 +5,7 @@
 }
 
 .heading{
-  @apply w-full h-[30px] flex justify-between mb-3 font-semibold
+  @apply w-full h-[30px] flex justify-between mb-3 font-semibold max-md:text-xl 
 }
 
 .theme_1--key{

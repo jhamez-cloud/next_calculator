@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+//import React, { useEffect, useRef } from 'react'
 import { StateContext } from '@/Context/StateContext';
 import { useContext } from 'react';
 
@@ -9,8 +9,8 @@ const Screen = () => {
         throw new Error ("StateContext.Provider is missing");
     }
   
-    const {theme,setTheme} = context;
-    const {expression,setExpression} = context;
+    //const {theme,setTheme} = context;
+    const {expression,theme} = context;
     
 
   return (
