@@ -42,4 +42,4 @@ next-env.d.ts
 
 
 style-guide.md
-/src/Service/firebase.Config.ts
+firebase.Config.ts
